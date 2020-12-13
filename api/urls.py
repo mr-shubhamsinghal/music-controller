@@ -4,5 +4,5 @@ from api import views
 
 
 urlpatterns = [
-    path('home/', views.main)
+    path('room/', views.RoomView.as_view())
 ]
