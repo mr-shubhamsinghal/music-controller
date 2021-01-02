@@ -9,6 +9,7 @@ import {
 
 import RoomCreatePage from "./RoomCreatePage";
 import RoomJoinPage from "./RoomJoinPage";
+import Room from "./Room";
 
 
 export default class HomePage extends Component {
@@ -21,8 +22,9 @@ export default class HomePage extends Component {
             <Router>
                 <Switch>
                     <Route exact path="/"><p>This is the home page</p></Route>
-                    <Route path="/room-join-page" component={RoomJoinPage} />
-                    <Route path="/room-create-page" component={RoomCreatePage} />
+                    <Route path="/join" component={RoomJoinPage} />
+                    <Route path="/create" component={RoomCreatePage} />
+                    <Route path="/room/:roomCode" component={Room} />
                 </Switch>
             </Router>
         );
